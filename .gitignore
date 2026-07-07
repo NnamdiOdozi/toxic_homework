@@ -256,8 +256,7 @@ outputs/data/
 *.npz
 *.arrow
 *.parquet
-speculators_venv/
-external/
+
 
 .venv/
 

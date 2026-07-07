@@ -19,8 +19,9 @@ RUN_ENV_SETUP=0
 set -euo pipefail
 
 #: "${REPO_URL:?ERROR: REPO_URL must be set. Example: REPO_URL=https://github.com/user/repo.git}"
-REPO_URL="${REPO_URL:-https://github.com/NnamdiOdozi/spec_dec_quant_hw.git}"
+REPO_URL="${REPO_URL:-https://github.com/NnamdiOdozi/toxic_homework.git}"
 PROJECT_DIR="${PROJECT_DIR:-$HOME/toxic_homework}"
+REMOTE_ENV_FILE="/tmp/$(basename "$PROJECT_DIR").env"
 RUN_ENV_SETUP="${RUN_ENV_SETUP:-1}"
 
 EARLY_LOG_DIR="/tmp/setup_gpu_logs"
@@ -179,11 +180,11 @@ git rev-parse --short HEAD || true
 git status --short || true
 
 echo "=== Copy .env if deploy script provided one ==="
-if [ -f /tmp/spec_dec_quant.env ]; then
-  cp /tmp/spec_dec_quant.env "$PROJECT_DIR/.env"
+if [ -f "$REMOTE_ENV_FILE" ]; then
+  cp "$REMOTE_ENV_FILE" "$PROJECT_DIR/.env"
   echo ".env copied to $PROJECT_DIR/.env"
 else
-  echo "No /tmp/spec_dec_quant.env found; skipping .env copy."
+  echo "No $REMOTE_ENV_FILE found; skipping .env copy."
 fi
 
 echo "=== Save machine fingerprint ==="

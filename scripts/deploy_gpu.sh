@@ -10,7 +10,7 @@
 #   RUN_ENV_SETUP=1           Run scripts/setup_envs.sh after GPU bootstrap
 #
 # Example:
-#   REPO_URL=https://github.com/NnamdiOdozi/spec_dec_quantization_hw.git \
+#   REPO_URL=https://github.com/NnamdiOdozi/toxic_homework.git \
 #   PROJECT_DIR=/home/nodozi/toxic_homework \
 #   bash scripts/deploy_gpu.sh nebius-vm
 
@@ -18,6 +18,7 @@ set -euo pipefail
 
 HOST="${1:-nebius-vm}"
 LOCAL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REMOTE_ENV_FILE="/tmp/$(basename "$LOCAL_DIR").env"
 
 LOG_DIR="$LOCAL_DIR/logs"
 mkdir -p "$LOG_DIR"
@@ -57,8 +58,8 @@ echo "=== Copying setup_gpu.sh to $HOST:/tmp ==="
 scp "$LOCAL_DIR/scripts/setup_gpu.sh" "$HOST:/tmp/setup_gpu.sh"
 
 if [ -f "$LOCAL_DIR/.env" ]; then
-  echo "=== Copying .env to $HOST:/tmp/spec_dec_quant.env ==="
-  scp "$LOCAL_DIR/.env" "$HOST:/tmp/spec_dec_quant.env"
+  echo "=== Copying .env to $HOST:$REMOTE_ENV_FILE ==="
+  scp "$LOCAL_DIR/.env" "$HOST:$REMOTE_ENV_FILE"
 else
   echo "=== No local .env found; skipping .env copy ==="
 fi
