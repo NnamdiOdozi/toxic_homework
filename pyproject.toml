@@ -13,3 +13,10 @@ dependencies = [
     "torchao >= 0.16",
     "scikit-learn",
 ]
+
+[dependency-groups]
+dev = [
+    "ipykernel >= 6.29",
+    "jupyter >= 1.0",
+    "ipywidgets >= 8.1",
+]

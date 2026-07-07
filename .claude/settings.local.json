@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "PATH": "/home/nnamd/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH",
+    "EDITOR": "nano",
+    "VISUAL": "nano"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(cp:*)",
+      "Bash(open:*)",
+      "Bash(grep:*)",
+      "Bash(chmod:*)",
+      "Bash(file:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(pwd:*)",
+      "Bash(mkdir:*)",
+      "Bash(wc:*)",
+      "Bash(which:*)",
+      "Bash(touch:*)",
+      "Bash(diff:*)",
+      "Bash(test:*)",
+      "Bash(set:*)",
+      "Bash(sh -c 'cd:*)",
+      "Bash(sh -c 'ls:*)",
+      "Bash(sh -c 'cat:*)",
+      "Bash(sh -c 'echo:*)",
+      "Bash(sh -c 'cp:*)",
+      "Bash(sh -c 'open:*)",
+      "Bash(sh -c 'grep:*)",
+      "Bash(sh -c 'chmod:*)",
+      "Bash(sh -c 'file:*)",
+      "Bash(sh -c 'head:*)",
+      "Bash(sh -c 'tail:*)",
+      "Bash(sh -c 'pwd:*)",
+      "Bash(sh -c 'mkdir:*)",
+      "Bash(sh -c 'wc:*)",
+      "Bash(sh -c 'which:*)",
+      "Bash(sh -c 'touch:*)",
+      "Bash(sh -c 'diff:*)",
+      "Bash(sh -c 'test:*)",
+      "Bash(sh -c 'set:*)",
+      "Read(//mnt/c/Users/nnamd/AppData/Roaming/Code/User/**)",
+      "Read(/home/nodozi/projects/**)",
+      "Bash(uv run python:*)",
+      "Bash(apt list --installed)",
+      "Bash(npm --version)",
+      "Bash(uv --version)",
+      "Bash(docker --version)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(*/.env.)",
+      "Bash(cat .env*)",
+      "Bash(cat /.env)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git push https://*)",
+      "Bash(git remote add *)",
+      "Bash(git reset --hard*)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(rsync *)",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(nc *)",
+      "Bash(netcat *)",
+      "Read(*/id_rsa)",
+      "Read(*/id_ed25519)",
+      "Read(*/id_ecdsa)",
+      "Read(*/id_dsa)",
+      "Read(**/.ssh/*)",
+      "Read(**/.aws/credentials)",
+      "Read(**/.aws/config)",
+      "Edit(~/.claude/settings.json)",
+      "Write(~/.claude/settings.json)"
+    ],
+    "ask": [],
+    "defaultMode": "bypassPermissions"
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "github",
+    "markitdown",
+    "playwright",
+    "filesystem"
+  ],
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "set -a && . /home/nnamd/toxic_homework/.env.claude && set +a"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -86,6 +86,8 @@ sudo apt-get install -y \
   htop
 
 echo "=== Install direnv ==="
+mkdir -p "$HOME/.local/bin"
+export bin_path="$HOME/.local/bin"
 if ! command -v direnv >/dev/null 2>&1; then
   curl -sfL https://direnv.net/install.sh | bash
 fi
