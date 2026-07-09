@@ -90,11 +90,6 @@
         "mean_max": 0.9942953824996948,
         "mean_std": 0.23675843736488592
       }
-    },
-    "rm_metrics": {
-      "pairwise_acc": 0.0,
-      "mean_margin": NaN,
-      "n": 277
     }
   },
   "dpo": {
@@ -114,13 +109,6 @@
         "mean_max": 0.9942953824996948,
         "mean_std": 0.23675843736488592
       }
-    }
-  },
-  "rm": {
-    "metrics": {
-      "pairwise_acc": 0.0,
-      "mean_margin": NaN,
-      "n": 277
     }
   }
 }
