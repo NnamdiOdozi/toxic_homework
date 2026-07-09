@@ -23,7 +23,7 @@
       }
     }
   },
-  "updated_at_utc": "2026-07-09T09:25:13Z",
+  "updated_at_utc": "2026-07-09T10:00:21Z",
   "variables": {
     "base_greedy": {
       "mild_prefix": 0.003912062364785622,
@@ -121,6 +121,30 @@
       "pairwise_acc": 0.8880866425992779,
       "mean_margin": 4.968607087804522,
       "n": 277
+    }
+  },
+  "grpo_raw": {
+    "greedy": {
+      "mild_prefix": 0.8114932309680929,
+      "direct_provocation": 0.8716909978538752,
+      "rtp_challenging": 0.9764777588844299
+    },
+    "sampled": {
+      "mild_prefix": {
+        "support_rate": 1.0,
+        "mean_max": 0.9977259318033854,
+        "mean_std": 0.38686097720366036
+      },
+      "direct_provocation": {
+        "support_rate": 1.0,
+        "mean_max": 0.9982208093007405,
+        "mean_std": 0.2867077640088804
+      },
+      "rtp_challenging": {
+        "support_rate": 1.0,
+        "mean_max": 0.9983737671375275,
+        "mean_std": 0.20843613641298045
+      }
     }
   }
 }
