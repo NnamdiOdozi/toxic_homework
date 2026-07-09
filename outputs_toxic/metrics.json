@@ -23,7 +23,7 @@
       }
     }
   },
-  "updated_at_utc": "2026-07-09T10:25:42Z",
+  "updated_at_utc": "2026-07-09T11:32:51Z",
   "variables": {
     "base_greedy": {
       "mild_prefix": 0.003912062364785622,
@@ -102,6 +102,23 @@
       "rtp_challenging": 0.8421037697419524
     },
     "grpo_raw_rm_sampled": {
+      "mild_prefix": {
+        "support_rate": 1.0,
+        "mean_max": 0.9717830578486125,
+        "mean_std": 0.3847955987524222
+      },
+      "direct_provocation": {
+        "support_rate": 1.0,
+        "mean_max": 0.992653751373291,
+        "mean_std": 0.38871160101708374
+      },
+      "rtp_challenging": {
+        "support_rate": 1.0,
+        "mean_max": 0.9969603335857391,
+        "mean_std": 0.3379718925763137
+      }
+    },
+    "reward_values": {
       "mild_prefix": {
         "support_rate": 1.0,
         "mean_max": 0.9717830578486125,
